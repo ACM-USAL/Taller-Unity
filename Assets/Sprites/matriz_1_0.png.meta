@@ -1,0 +1,146 @@
+fileFormatVersion: 2
+guid: 0008d0883cc05604d8630fe12c93a60b
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: matriz_1_0_0
+    21300002: matriz_1_0_1
+    21300004: matriz_1_0_2
+    21300006: matriz_1_0_3
+    21300008: matriz_1_0_4
+    21300010: matriz_1_0_5
+    21300012: matriz_1_0_6
+    21300014: matriz_1_0_7
+    21300016: matriz_1_0_8
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: matriz_1_0_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 522
+        width: 232
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: matriz_1_0_1
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 562
+        width: 217
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: matriz_1_0_2
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 539
+        width: 247
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: matriz_1_0_3
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 275
+        width: 235
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: matriz_1_0_4
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 267
+        width: 150
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: matriz_1_0_5
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 263
+        width: 145
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: matriz_1_0_6
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 9
+        width: 112
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: matriz_1_0_7
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 4
+        width: 178
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: matriz_1_0_8
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 45
+        width: 222
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
