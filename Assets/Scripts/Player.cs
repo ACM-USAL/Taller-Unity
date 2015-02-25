@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Player : MonoBehaviour {
@@ -9,7 +9,8 @@ public class Player : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-	    move = new Vector3(Input.GetAxis("Horizontal"), 10*Input.GetAxis("Vertical"),0);
+
+	    move = new Vector2(Input.GetAxis("Horizontal"), 0);
         transform.position += move * speed * Time.deltaTime;
 
         if (Physics.Raycast(transform.position, -Vector3.up, out hit))
