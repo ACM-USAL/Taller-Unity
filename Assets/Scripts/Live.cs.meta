@@ -2,7 +2,8 @@ fileFormatVersion: 2
 guid: 4392de7eb3ae39241838eeeee6f874a8
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - objetoColisionable: {fileID: 147218, guid: 805624fd427b5bc4688de36194b07e2c, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
