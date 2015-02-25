@@ -4,7 +4,7 @@ using System.Collections;
 public class Live : MonoBehaviour {
 	private Vector3 move;
 	public float speed;
-    private int n = -1;
+    public int n;
     //public GameObject objetoColisionable;
 	// Update is called once per frame
     void OnCollisionEnter2D(Collision2D collider)
