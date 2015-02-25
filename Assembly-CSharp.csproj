@@ -53,7 +53,8 @@
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\Jump.cs" />
-     <Compile Include="Assets\Scripts\Live.cs" />
+     <Compile Include="Assets\Scripts\Life.cs" />
+     <Compile Include="Assets\Scripts\Limit.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <None Include="Assets\Posibles Sprites\url-sprites.txt" />
   </ItemGroup>

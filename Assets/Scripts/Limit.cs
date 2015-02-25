@@ -1,26 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Coin : MonoBehaviour {
-
-	private GameObject scoreGUI;
-
-	private int score;
+public class Limit : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		score = 0;
-		scoreGUI = GameObject.FindWithTag("Score");
+	
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		scoreGUI.guiText.text = "" + score;
+	
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		if (other.gameObject.tag == "Coin") {
-			score += 10;
+		if (other.gameObject.tag == "Player") {
+			other.transform.position = GameObject.FindWithTag("Spawn").transform.position;
+		}
+		if (other.gameObject.tag == "Enemy") {
 			Destroy(other.gameObject);
 		}
 	}
