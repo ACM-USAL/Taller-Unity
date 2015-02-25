@@ -6,13 +6,29 @@ public class Player : MonoBehaviour {
 
     private RaycastHit hit;
     private Vector3 move;
-    //public Animator anim;
-    //public Animation animat;
+    private float n;
+    private float life = 100;
 
-	// Update is called once per frame
+    void OnCollisionEnter2D(Collision2D colision)
+    {
+        if (colision.gameObject.tag == "Suelo")
+            n = 10;
+        if (colision.gameObject.tag == "Enemy")
+        {
+            life -= 100;
+            print("Dead!!!!!");
+            //Application.LoadLevel("Level0");
+        }
+    }
+    void OnCollisionExit2D(Collision2D colision)
+    {
+        if (colision.gameObject.tag == "Suelo")
+            n = 0;
+    }
+
 	void Update () {
         //anim = GetComponent<Animator> ();
-	    move = new Vector3(Input.GetAxis("Horizontal"), 10*Input.GetAxis("Vertical"),0);
+	    move = new Vector3(Input.GetAxis("Horizontal"), n*Input.GetAxis("Vertical"),0);
         transform.position += move * speed * Time.deltaTime;
         //anim.SetTrigger("PlayerWalk");
         //animat.Start();
@@ -20,6 +36,6 @@ public class Player : MonoBehaviour {
         {
             Vector3 objectForward = transform.InverseTransformDirection(Vector3.forward);
             transform.rotation = Quaternion.LookRotation(objectForward, hit.normal);
-        }
+        } 
 	}
 }
