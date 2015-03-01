@@ -1,0 +1,12 @@
+D:\Escritorio\Ramas\Taller-Unity-Jes-\Temp\bin\Debug\Assembly-CSharp.dll
+D:\Escritorio\Ramas\Taller-Unity-Jes-\Temp\bin\Debug\Assembly-CSharp.pdb
+D:\Escritorio\Ramas\Taller-Unity-Jes-\Temp\bin\Debug\UnityEditor.dll
+D:\Escritorio\Ramas\Taller-Unity-Jes-\Temp\bin\Debug\UnityEngine.dll
+D:\Escritorio\Ramas\Taller-Unity-Jes-\Temp\bin\Debug\UnityEngine.UI.dll
+D:\Escritorio\Ramas\Taller-Unity-Jes-\Temp\bin\Debug\Mono.Cecil.dll
+D:\Escritorio\Ramas\Taller-Unity-Jes-\Temp\bin\Debug\nunit.framework.dll
+D:\Escritorio\Ramas\Taller-Unity-Jes-\Temp\bin\Debug\Unity.DataContract.dll
+D:\Escritorio\Ramas\Taller-Unity-Jes-\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+D:\Escritorio\Ramas\Taller-Unity-Jes-\obj\Debug\Assembly-CSharp-vs.csprojResolveAssemblyReference.cache
+D:\Escritorio\Ramas\Taller-Unity-Jes-\obj\Debug\Assembly-CSharp.dll
+D:\Escritorio\Ramas\Taller-Unity-Jes-\obj\Debug\Assembly-CSharp.pdb
