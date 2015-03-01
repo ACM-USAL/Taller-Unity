@@ -28,7 +28,7 @@ public class Player : MonoBehaviour {
 
 	void Update () {
         //anim = GetComponent<Animator> ();
-	    move = new Vector3(Input.GetAxis("Horizontal"), n*Input.GetAxis("Vertical"),0);
+	    move = new Vector3(Input.GetAxis("Horizontal"), 10*Input.GetAxis("Vertical"),0);
         transform.position += move * speed * Time.deltaTime;
         //anim.SetTrigger("PlayerWalk");
         //animat.Start();
