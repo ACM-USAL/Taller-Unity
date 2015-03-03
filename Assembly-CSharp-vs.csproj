@@ -49,10 +49,9 @@
      <Compile Include="Assets\Scripts\Camera2DFollow.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\Coin.cs" />
-     <Compile Include="Assets\Scripts\Door.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
-     <Compile Include="Assets\Scripts\Live.cs" />
+     <Compile Include="Assets\Scripts\Limit.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <None Include="Assets\Posibles Sprites\url-sprites.txt" />
  <Reference Include="UnityEngine.UI">
