@@ -4,7 +4,7 @@ using System.Collections;
 public class Enemy : MonoBehaviour
 {
 
-    private Vector3 move;
+    private Vector3 move;//vector de 3 dimensiones
     public float speed;
     private int n = 1;
     private float alpha = 0;
