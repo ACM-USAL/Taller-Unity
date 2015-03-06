@@ -11,7 +11,7 @@ public class GameController : MonoBehaviour {
 	private GUITexture[] lifes; //Texturas para representar las vidas del jugador
 
     public static GameController instance = null;
-    private static int level;
+    public int level;
 
     void Awake()
     {
@@ -31,7 +31,7 @@ public class GameController : MonoBehaviour {
         scoreGUI = GameObject.FindWithTag("Score");        
 
         lifes = GameObject.FindWithTag("GuiLife").GetComponentsInChildren<GUITexture>();
-        coin = GameObject.FindWithTag("GuiCoin").GetComponentInChildren<GUITexture>();
+        //coin = GameObject.FindWithTag("GuiCoin").GetComponentInChildren<GUITexture>();
         level = 0;
     }
 	
@@ -40,14 +40,11 @@ public class GameController : MonoBehaviour {
     {
 		if (scoreGUI == null)
 			scoreGUI = GameObject.FindWithTag("Score"); 
-		if (lifes == null)
+		if (lifes[0] == null)
 			lifes = GameObject.FindWithTag("GuiLife").GetComponentsInChildren<GUITexture>();
 
 
         scoreGUI.guiText.guiText.text = "" + score;
-		Debug.Log (scoreGUI.guiText.name);
-		Debug.Log (scoreGUI.guiText.text);
-		Debug.Log (score);
 	}
 
     public void ChangeLifes(bool a)
@@ -70,6 +67,6 @@ public class GameController : MonoBehaviour {
     {
         //print("Cargando Level1");
         level++;
-        Application.LoadLevel(1);
+        Application.LoadLevel(level);
     }
 }

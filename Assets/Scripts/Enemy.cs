@@ -15,9 +15,10 @@ public class Enemy : MonoBehaviour
         transform.position += move * speed * Time.deltaTime;        
     }
 
+
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Enemycollider")
+		if (other.gameObject.tag == "Enemycollider")
         {            
             ChangeDirection();
         }

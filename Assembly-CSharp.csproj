@@ -48,12 +48,9 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\BlockMover.cs" />
      <Compile Include="Assets\Scripts\Camera2DFollow.cs" />
-     <Compile Include="Assets\Scripts\CameraFollow.cs" />
-     <Compile Include="Assets\Scripts\Coin.cs" />
-     <Compile Include="Assets\Scripts\Door.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
-     <Compile Include="Assets\Scripts\Jump.cs" />
+     <Compile Include="Assets\Scripts\KeepLifes.cs" />
      <Compile Include="Assets\Scripts\Life.cs" />
      <Compile Include="Assets\Scripts\Limit.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />

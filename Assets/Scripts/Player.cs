@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
 	public GameObject life;
 	private int nlifes;
 	private int score;
-	public AudioSource coinSound;
+	public AudioSource audio;
 	public AudioClip[] clips;
 
     private RaycastHit hit; 
@@ -68,15 +68,15 @@ public class Player : MonoBehaviour
         {
             animator.SetTrigger("isJumping");
             rigidbody2D.AddForce(new Vector2(0, force));  
-			if (!coinSound.isPlaying){
-				coinSound.clip = clips[2];
-				coinSound.Play();
+			if (!audio.isPlaying){
+				audio.clip = clips[2];
+				audio.Play();
 			}
 
         }
 
 		/***CAIDA***/
-		if (rigidbody2D.velocity.y < -18) {
+		if (rigidbody2D.velocity.y < -18.5) {
 			gameController.ChangeLifes(false);
 			rigidbody2D.AddForce(new Vector2(0, force));
 			CheckIfGameOver();
@@ -91,9 +91,9 @@ public class Player : MonoBehaviour
         {
             gameController.score += 10;
             Destroy(other.gameObject);
-			if (!coinSound.isPlaying || coinSound.clip != clips[0]){
-				coinSound.clip = clips[0];
-				coinSound.Play();
+			if (!audio.isPlaying || audio.clip != clips[0]){
+				audio.clip = clips[0];
+				audio.Play();
 			}
         }
         /***VIDAS***/
@@ -123,7 +123,6 @@ public class Player : MonoBehaviour
 
             if (vFinal.y < -0.5)
             {
-                print("Salto");
 				int numero=Random.Range(0, 101);
 
 				if(numero>=40 && numero<=75)
@@ -132,14 +131,13 @@ public class Player : MonoBehaviour
 				}
                 Destroy(other.gameObject);
                 rigidbody2D.AddForce(new Vector2(0, -vFinal.y * 100));
-				if (!coinSound.isPlaying){
-					coinSound.clip = clips[1];
-					coinSound.Play();
+				if (!audio.isPlaying){
+					audio.clip = clips[1];
+					audio.Play();
 				}
             }
             else
             {
-                print("else");
                 Enemy o = other.gameObject.GetComponent<Enemy>();
                 o.ChangeDirection();
                 gameController.ChangeLifes(false);
