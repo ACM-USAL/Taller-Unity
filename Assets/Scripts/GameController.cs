@@ -42,7 +42,17 @@ public class GameController : MonoBehaviour {
 			scoreGUI = GameObject.FindWithTag("Score"); 
 		if (lifes[0] == null)
 			lifes = GameObject.FindWithTag("GuiLife").GetComponentsInChildren<GUITexture>();
-
+		if (Input.GetKey(KeyCode.Q))
+			Application.Quit();
+		if (Input.GetKey (KeyCode.R)) {
+			level = -1;
+			ChangeLevel();
+			nlifes = 3;
+			for (int i = 0; i < lifes.Length; i++){
+				lifes[i].enabled = true;
+			}
+			score = 0;
+		}
 
         scoreGUI.guiText.guiText.text = "" + score;
 	}
