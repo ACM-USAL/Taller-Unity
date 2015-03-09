@@ -80,6 +80,10 @@ public class Player : MonoBehaviour
 			gameController.ChangeLifes(false);
 			rigidbody2D.AddForce(new Vector2(0, force));
 			CheckIfGameOver();
+			if (!audio.isPlaying){
+				audio.clip = clips[3];
+				audio.Play();
+			}
 		}
     }
 
@@ -104,8 +108,13 @@ public class Player : MonoBehaviour
 
             if (gameController.nlifes < 3) //Sólo incrementamos las vidas si tenemos menos de 3
             {
-                gameController.ChangeLifes(true);               
+                gameController.ChangeLifes(true);          
             }
+
+			if (!audio.isPlaying){
+				audio.clip = clips[4];
+				audio.Play();
+			}
         }
         /***PUERTA***/
         else if (other.gameObject.tag == "Door")
@@ -142,6 +151,10 @@ public class Player : MonoBehaviour
                 o.ChangeDirection();
                 gameController.ChangeLifes(false);
                 CheckIfGameOver();
+				if (!audio.isPlaying){
+					audio.clip = clips[3];
+					audio.Play();
+				}
             }
         }   
     }
