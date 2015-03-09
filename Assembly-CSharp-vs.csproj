@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{531D429A-F8AE-E717-7BB3-E92F393E42E6}</ProjectGuid>
+	<ProjectGuid>{E4070501-23D8-535F-8D7C-DAC2FFB4EAA7}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -51,10 +51,8 @@
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\KeepLifes.cs" />
-     <Compile Include="Assets\Scripts\Life.cs" />
      <Compile Include="Assets\Scripts\Limit.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
-     <None Include="Assets\Posibles Sprites\url-sprites.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.2/UnityEngine.UI.dll</HintPath>
  </Reference>

@@ -5,7 +5,6 @@ public class GameController : MonoBehaviour {
 
 	public GameObject scoreGUI; //Texto con la puntuación
     public int score; //Puntuación (Monedas)
-	private GUITexture coin; //Textura para representar las monedas del jugador
 
     public int nlifes = 3; //Número de vidas iniciales del jugador 
 	private GUITexture[] lifes; //Texturas para representar las vidas del jugador
@@ -31,7 +30,6 @@ public class GameController : MonoBehaviour {
         scoreGUI = GameObject.FindWithTag("Score");        
 
         lifes = GameObject.FindWithTag("GuiLife").GetComponentsInChildren<GUITexture>();
-        //coin = GameObject.FindWithTag("GuiCoin").GetComponentInChildren<GUITexture>();
         level = 0;
     }
 	
@@ -40,10 +38,13 @@ public class GameController : MonoBehaviour {
     {
 		if (scoreGUI == null)
 			scoreGUI = GameObject.FindWithTag("Score"); 
+
 		if (lifes[0] == null)
 			lifes = GameObject.FindWithTag("GuiLife").GetComponentsInChildren<GUITexture>();
+
 		if (Input.GetKey(KeyCode.Q))
 			Application.Quit();
+
 		if (Input.GetKey (KeyCode.R)) {
 			level = -1;
 			ChangeLevel();
@@ -61,6 +62,7 @@ public class GameController : MonoBehaviour {
     {
         if (nlifes == 0)
             return;
+
         if (a)
         {
             lifes[nlifes].enabled = a;

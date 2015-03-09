@@ -11,8 +11,6 @@ public class Player : MonoBehaviour
 	public LayerMask groundMask; //Capa del suelo para saber sobre qué queremos saltar
 
 	public GameObject life;
-	private int nlifes;
-	private int score;
 	public AudioSource audio;
 	public AudioClip[] clips;
 
