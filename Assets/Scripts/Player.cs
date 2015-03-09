@@ -8,13 +8,17 @@ public class Player : MonoBehaviour
     public bool onGround = true; //Determina si el jugador está en el suelo para evitar que salte en el aire
     public Transform checkGround; 
     public float checkRadius = 0.07f;
-    public LayerMask groundMask; //Capa del suelo para saber sobre qué queremos saltar
+	public LayerMask groundMask; //Capa del suelo para saber sobre qué queremos saltar
+
+	public GameObject life;
+	private int nlifes;
+	private int score;
+	public AudioSource audio;
+	public AudioClip[] clips;
 
     private RaycastHit hit; 
     private Vector3 move;
-    private int nlifes;
-    private int score;
-
+    
     private Animator animator;
     public float moveTime = 0.1f;
     private GameController gameController;
@@ -63,8 +67,24 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.W) && onGround)
         {
             animator.SetTrigger("isJumping");
-            rigidbody2D.AddForce(new Vector2(0, force));            
+            rigidbody2D.AddForce(new Vector2(0, force));  
+			if (!audio.isPlaying){
+				audio.clip = clips[2];
+				audio.Play();
+			}
+
         }
+
+		/***CAIDA***/
+		if (rigidbody2D.velocity.y < -18.5) {
+			gameController.ChangeLifes(false);
+			rigidbody2D.AddForce(new Vector2(0, force));
+			CheckIfGameOver();
+			if (!audio.isPlaying){
+				audio.clip = clips[3];
+				audio.Play();
+			}
+		}
     }
 
     /***COLISIONES***/
@@ -75,6 +95,10 @@ public class Player : MonoBehaviour
         {
             gameController.score += 10;
             Destroy(other.gameObject);
+			if (!audio.isPlaying || audio.clip != clips[0]){
+				audio.clip = clips[0];
+				audio.Play();
+			}
         }
         /***VIDAS***/
         else if (other.gameObject.tag == "Life")
@@ -84,8 +108,13 @@ public class Player : MonoBehaviour
 
             if (gameController.nlifes < 3) //Sólo incrementamos las vidas si tenemos menos de 3
             {
-                gameController.ChangeLifes(true);               
+                gameController.ChangeLifes(true);          
             }
+
+			if (!audio.isPlaying){
+				audio.clip = clips[4];
+				audio.Play();
+			}
         }
         /***PUERTA***/
         else if (other.gameObject.tag == "Door")
@@ -103,17 +132,29 @@ public class Player : MonoBehaviour
 
             if (vFinal.y < -0.5)
             {
-                print("Salto");
+				int numero=Random.Range(0, 101);
+
+				if(numero>=40 && numero<=75)
+				{
+					Instantiate (life, other.transform.position, other.transform.rotation);
+				}
                 Destroy(other.gameObject);
                 rigidbody2D.AddForce(new Vector2(0, -vFinal.y * 100));
+				if (!audio.isPlaying){
+					audio.clip = clips[1];
+					audio.Play();
+				}
             }
             else
             {
-                print("else");
                 Enemy o = other.gameObject.GetComponent<Enemy>();
                 o.ChangeDirection();
                 gameController.ChangeLifes(false);
                 CheckIfGameOver();
+				if (!audio.isPlaying){
+					audio.clip = clips[3];
+					audio.Play();
+				}
             }
         }   
     }

@@ -20,12 +20,14 @@ using UnityEngine;
             lastTargetPosition = target.position;
             offsetZ = (transform.position - target.position).z;
             transform.parent = null;
+			target = GameObject.FindWithTag("Player").transform;
         }
 
         // Update is called once per frame
         private void Update()
         {
-
+			if (target == null)
+				target = GameObject.FindWithTag("Player").transform;
             // only update lookahead pos if accelerating or changed direction
             float xMoveDelta = (target.position - lastTargetPosition).x;
 
